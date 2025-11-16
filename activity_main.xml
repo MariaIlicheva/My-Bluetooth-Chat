@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#000000"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Bluetooth Chat"
+        android:textColor="#00FF00"
+        android:textSize="32sp"
+        android:fontFamily="monospace"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="8dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="~/chat your friend"
+        android:textColor="#00FF00"
+        android:textSize="16sp"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:layout_marginBottom="24dp" />
+
+    <Button
+        android:id="@+id/btnDiscover"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Find devices"
+        android:textColor="#00FF00"
+        android:backgroundTint="#111111"
+        android:fontFamily="monospace"
+        android:layout_marginBottom="8dp" />
+
+    <ListView
+        android:id="@+id/listDevices"
+        android:layout_width="match_parent"
+        android:layout_height="181dp"
+        android:layout_marginTop="8dp"
+        android:background="#111111"
+        android:divider="#00FF00"
+        android:dividerHeight="1dp"
+        android:fontFamily="monospace"
+        android:scrollbars="vertical"
+        android:textColor="#00FF00" />
+
+    <!-- Чат -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp"
+        android:background="#111111"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/tvChat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#00FF00"
+            android:textSize="16sp"
+            android:fontFamily="monospace"
+            android:scrollbars="vertical"
+            android:lineSpacingExtra="4dp" />
+    </ScrollView>
+
+    <!-- Поле ввода и кнопка отправки c horizontal orientation-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <EditText
+            android:id="@+id/etMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="~/Enter message"
+            android:textColorHint="#00FF00"
+            android:textColor="#00FF00"
+            android:backgroundTint="#111111"
+            android:fontFamily="monospace"
+            android:padding="8dp" />
+
+        <!-- кнопка отправки изначально неактивна-->
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sent"
+            android:textColor="#00FF00"
+            android:backgroundTint="#111111"
+            android:fontFamily="monospace"
+            android:enabled="false" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnDisconnect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Disconnect"
+        android:textColor="#00FF00"
+        android:backgroundTint="#111111"
+        android:fontFamily="monospace"
+        android:layout_marginTop="8dp"
+        android:enabled="false" />
+
+</LinearLayout>
